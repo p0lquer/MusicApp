@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Music Player</title>
+</head>
+<body>
+
+    <h1>Music Player</h1>
+
+    <audio controls id="player">
+        <source src="http://localhost:5289/api/Songs/2/play"
+                type="audio/mp4">
+        Your browser does not support audio playback.
+    </audio>
+
+</body>
+<script>
+    function playsong(id) {
+        const player = document.getElementById("player");
+
+        player.src = `http://localhost:5289/api/Songs/${id}/play`;
+        player.play();
+    }
+
+</script>
+</html>
